@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #117d89;
+            --secondary-color: #7ba0a4;
+            --text-color: #333;
+            --background-color: #deeaed;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        #showcase {
+            min-height: 700px;
+            background: url(port1.jpg) no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #showcase h1 {
+            
+            margin-top: 400px;
+            font-size: 55px;
+            margin-bottom: 40px;
+
+        }
+
+        #showcase p {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #about, #projects {
+            padding: 15px;
+            background: #fff;
+            margin-top: 20px;
+        }
+
+        #about h2, #projects h2 {
+            color: var(--primary-color);
+        }
+
+        .project {
+            background: var(--background-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: var(--secondary-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">My</span> Portfolio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my skills and projects in web development</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Bsc IT student at Jai Hind College.I'm a passionate web developer with experience in HTML, CSS, and JavaScript. Actively seeking opportunities to apply my skills and grow in web development.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>An inventory management system that maintains stock levels andkeeps a record of the order requests.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>A crochet website landing page showcasing html and css skills. </p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Fully functional template for temperature converter and calculator</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

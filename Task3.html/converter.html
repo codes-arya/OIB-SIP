@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        :root {
+            --primary-color: #b1b2b2;
+            --secondary-color: #2c3e50;
+            --background: linear-gradient(135deg,#6ca393,#c3e8de,#6ca393,#c3e8de,#6ca393);
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: var(--background);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b8bcbf;
+        }
+
+        .result {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .result span {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <form id="converter-form">
+            <div class="input-group">
+                <label for="temperature">Enter Temperature:</label>
+                <input type="number" id="temperature" placeholder="Enter temperature" required>
+            </div>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="celsius" name="unit" value="celsius" checked>
+                    <label for="celsius">Celsius</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="fahrenheit" name="unit" value="fahrenheit">
+                    <label for="fahrenheit">Fahrenheit</label>
+                </div>
+            </div>
+            <button type="submit">Convert</button>
+        </form>
+        <div class="result">
+            Result: <span id="result">--</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('converter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const unit = document.querySelector('input[name="unit"]:checked').value;
+            let result;
+
+            if (unit === 'celsius') {
+                result = (temperature * 9/5) + 32;
+                result = result.toFixed(2) + '°F';
+            } else {
+                result = (temperature - 32) * 5/9;
+                result = result.toFixed(2) + '°C';
+            }
+
+            document.getElementById('result').textContent = result;
+        });
+    </script>
+</body>
+</html>
+

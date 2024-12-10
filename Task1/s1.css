@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #4a4a4a;
+    background-color: #faf9f8;
+}
+
+header {
+    background-color: rgba(250, 249, 248, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family:'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8b7355;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5c4033;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8b7355;
+}
+
+
+.hero {
+    height: 100vh;
+    background: url('crochet.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5%;
+    position: relative;
+}
+
+.hero::before {
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #5c4033;
+    margin-bottom: 1rem;
+    font-family: cursive;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #8b7355;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #8b7355;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #5c4033;
+}
+
+/* Categories section */
+.categories {
+    padding: 5rem 5%;
+    background-color: #fff;
+}
+
+.categories h2 {
+    text-align: center;
+    color: #5c4033;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: #faf9f8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    color: #5c4033;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.category-card p {
+    color: #8b7355;
+    padding: 0 1rem 1rem;
+}
+
+/* About section */
+.about {
+    padding: 5rem 5%;
+    background-color: #f5f2ef;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    color: #5c4033;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #5c4033;
+    color: #faf9f8;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-section input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-section button {
+    padding: 0.5rem 1rem;
+    background-color: #8b7355;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #a08b6c;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
